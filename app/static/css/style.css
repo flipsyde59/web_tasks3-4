@@ -2,6 +2,11 @@
     text-decoration: line-through !important;
 }
 
+button.btn-edit-todo.btn-primary{
+    float: right !important;
+}
+
+
 .header-block {
     display: inline-block;
     width: 86%;

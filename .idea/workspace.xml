@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e15546a2-96b4-40ae-bf7e-cbf6de110597" name="Default Changelist" comment="" />
+    <list default="true" id="e15546a2-96b4-40ae-bf7e-cbf6de110597" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/storage/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/storage/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db/database.sqlite" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,17 +19,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lL5rftZDlIZlQVPF9XoedD7bqV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../visual studio 2013/Projects/python/trrp_1" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -106,38 +122,50 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="438" y="71" key="#xdebugger.evaluate/0.0.1366.738@0.0.1366.738" timestamp="1607402206167" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1607417071024">
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1607422159887">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607417071024" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1607417071024">
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1607422159887" />
+    <state x="553" y="266" key="Github.ShareDialog" timestamp="1607419164033">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1607417071024" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1607417071023">
+    <state x="553" y="266" key="Github.ShareDialog/0.0.1366.738@0.0.1366.738" timestamp="1607419164033" />
+    <state x="458" y="73" key="Github.UntrackedFilesDialog" timestamp="1607419201890">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1607417071023" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1607417071024">
+    <state x="458" y="73" key="Github.UntrackedFilesDialog/0.0.1366.738@0.0.1366.738" timestamp="1607419201890" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1607645692839">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1607417071024" />
-    <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1607402296792">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607645692839" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1607645692839">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607402296792" />
-    <state width="1345" height="227" key="GridCell.Tab.1.center" timestamp="1607402296791">
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1607645692839" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1607645692839">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1607402296791" />
-    <state width="1345" height="227" key="GridCell.Tab.1.left" timestamp="1607402296791">
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1607645692839" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1607645692839">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1607402296791" />
-    <state width="1345" height="227" key="GridCell.Tab.1.right" timestamp="1607402296792">
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1607645692839" />
+    <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1607420312428">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1607402296792" />
+    <state width="1345" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1607420312428" />
+    <state width="1345" height="227" key="GridCell.Tab.1.center" timestamp="1607420312428">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1607420312428" />
+    <state width="1345" height="227" key="GridCell.Tab.1.left" timestamp="1607420312428">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1607420312428" />
+    <state width="1345" height="227" key="GridCell.Tab.1.right" timestamp="1607420312428">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1607420312428" />
     <state x="184" y="13" key="SettingsEditor" timestamp="1607409761555">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -146,6 +174,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="254" height="198" key="ShowFilterAction_Filter_Popup/0.0.1366.738@0.0.1366.738" timestamp="1607409771108" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1607419262192">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1607419262192" />
+    <state x="482" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1607419256749">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="482" y="270" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.738@0.0.1366.738" timestamp="1607419256749" />
     <state x="348" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1607409771104">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

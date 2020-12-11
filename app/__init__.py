@@ -141,27 +141,35 @@ def home_action():
     # AJAX Update
     if request.method == 'PATCH':
         search = request.get_json()
-        Storage.update_todo_status(search['todo_id'], search['action'])
-        return jsonify(search)
+        if 'name' in search.keys():
+            Storage.update_todo_date(search['todo_id'], search['name'])
+        else:
+            Storage.update_todo_status(search['todo_id'], search['done'])
+        return "succsess", 200
     todo = Storage.get_user_todos(user_id)
     if todo:
         list_l = len(todo)
     if not request.form['todo_name']:
         return render_template('pages/index.html', user=user, todo=todo, len=list_l,
                                error="Введите название для задачи")
-    #if not request.form['todo_description']:
-    #    return render_template('pages/index.html', user=user, todo=todo, len=list_l,
-    #                           error="Введите описание для задачи")
     Storage.add_todo(Todo(None, request.form['todo_name'], user_id, 0))
     return redirect(url_for('home'))
 
 
-# Получение задачи
+# Получение задач
 @app.route('/getTodos', methods=['GET'])
 def get_todos():
     user_id = session['user_id']
     todo = Storage.get_user_todos(user_id)
     todoList = [t.serialize() for t in todo]
-    print(todoList)
     return json.dumps(todoList)
+
+# Получение данных задачи
+@app.route('/getTodoData/<int:todo_id>', methods=['GET'])
+def get_todo_data(todo_id):
+    user_id = session['user_id']
+    todo = Storage.get_todo_data(todo_id)
+    if todo.user_id==user_id:
+        return json.dumps(todo.serialize())
+    return redirect(url_for('home'))
 

@@ -52,19 +52,25 @@ class Storage:
         db.commit()
 
     @staticmethod
-    def update_todo_status(todo_id, action):
-        if action == "done":
+    def update_todo_status(todo_id, done):
+        if done == "done":
             db.execute('UPDATE todos SET done = 1 WHERE id = ?', (todo_id,))
             db.commit()
-        if action == "undone":
+        if done == "undone":
             db.execute('UPDATE todos SET done = 0 WHERE id = ?', (todo_id,))
             db.commit()
+
+    @staticmethod
+    def update_todo_date(todo_id, title):
+        db.execute('UPDATE todos SET title = ? WHERE id = ?', (title, todo_id))
+        db.commit()
+
 
     @staticmethod
     def get_todo_status(todo_id):
         todo_status = db.execute('SELECT * FROM todos WHERE id = ?', (todo_id,)).fetchone()
         if todo_status:
-            return Todo(todo_status[0], todo_status[1], todo_status[2], todo_status[3])
+            return Todo(*todo_status)
         else:
             return None
 
@@ -75,3 +81,11 @@ class Storage:
             return True
         else:
             return False
+
+    @staticmethod
+    def get_todo_data(todo_id):
+        todo = db.execute('SELECT * FROM todos WHERE id = ?', (todo_id,)).fetchone()
+        if todo:
+            return Todo(*todo)
+        else:
+            return None

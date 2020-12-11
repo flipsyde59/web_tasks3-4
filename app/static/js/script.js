@@ -102,7 +102,7 @@ const ToDos = {
                         chkLabel.innerText='Выполнено';
                         entry = {
                             todo_id: todo.id,
-                            action: "done"
+                            done: "done"
                         }
                     }
                     else {
@@ -111,7 +111,7 @@ const ToDos = {
                         headerBlock.classList.remove("done-todo");
                         entry = {
                             todo_id: todo.id,
-                            action: "undone"
+                            done: "undone"
                         }
                     }
                     await fetch(`${window.origin}`, {
@@ -143,11 +143,22 @@ const ToDos = {
                 button.classList.add('btn');
                 button.classList.add('btn-danger');
                 button.classList.add('btn-sm');
-                button.classList.add('btn-remove-todo')
+                button.classList.add('float-right');
                 button.classList.add('ml-auto');
                 button.textContent = 'Удалить';
                 button.addEventListener('click', () => { this.removeTodo(todo.id) });
                 todoItem.appendChild(button);
+                this.todoList.appendChild(todoItem);
+                const button_edit = document.createElement('button');
+                button_edit.classList.add('btn');
+                button_edit.classList.add('float-left');
+                button_edit.classList.add('btn-primary');
+                button_edit.classList.add('btn-sm');
+                button_edit.textContent = 'Редактировать';
+                button_edit.addEventListener('click', (ev) => { this.editTodoWindow(ev, todo.id) });
+                button_edit.setAttribute('data-toggle', "modal")
+
+                todoItem.appendChild(button_edit);
                 this.todoList.appendChild(todoItem);
             }
         }
@@ -184,6 +195,63 @@ const ToDos = {
             this.showError(error.message);
         }
     },
+
+    async editTodoWindow(ev, id){
+        ev.preventDefault();
+        this.setLoading(true);
+        const todoResponse = await fetch(`${window.origin}/getTodoData/${id}`);
+        this.setLoading(false);
+        if (!todoResponse.ok) {
+            throw new Error('Не удалось получить данные задачи... ');
+        }
+        const todo_data = await todoResponse.json();
+        var newModal = `
+  <div class="modal fade" id="edit-todo-window${id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="title-modal${id}">Редактировать задачу</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+      <label>Название задачи:</label>
+        <input id='edit-title${id}'>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary" id='save-todo-edit${id}'>Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+  `;
+  $('body').append(newModal);
+  $('#edit-todo-window'+id).modal('show');
+  $('#edit-title'+id).val(todo_data['name']);
+  $('#save-todo-edit'+id).on('click', async (e) => {
+            e.preventDefault();
+            let new_name=$('#edit-title'+id).val()
+            if (new_name==todo_data['name']) {$('#edit-todo-window'+id).modal('hide'); return}
+            else{
+            const entry = {
+                        todo_id: id,
+                        name: new_name
+                    };
+
+            await fetch(`${window.origin}`, {
+                method: "PATCH",
+                credentials: "include",
+                body: JSON.stringify(entry),
+                cache: "no-cache",
+                headers: new Headers({
+                    "content-type": "application/json"
+                })
+            });
+            $('#edit-todo-window'+id).modal('hide');
+            $('[data-target="#demo'+id+'"]')[0].innerText=new_name;//this.init();
+    }});
+    }
 }
 
 ToDos.init();
+
